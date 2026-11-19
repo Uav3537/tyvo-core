@@ -1,6 +1,6 @@
 {
   "name": "@tyvo/core",
-  "version": "1.1.0",
+  "version": "2.0.0",
   "description": "TypeScript-only, file-system routed web framework with typed routes, middlewares, rate limiting and React Server Components.",
   "type": "module",
   "main": "./dist/index.js",
