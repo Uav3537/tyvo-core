@@ -8,6 +8,10 @@
   "bin": {
     "tyvo": "dist/cli.js"
   },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Uav3537/@tyvo/core.git"
+  },
   "exports": {
     ".": {
       "types": "./dist/index.d.ts",
