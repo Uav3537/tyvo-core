@@ -1,0 +1,12 @@
+{
+    "extends": "../tsconfig.json",
+    "compilerOptions": {
+        "jsx": "react-jsx",
+        "paths": {
+            "@tyvo/core": ["../src/index.ts"],
+            "@tyvo/core/server": ["../src/server/index.ts"],
+            "@tyvo/core/router": ["../src/react/router.ts"]
+        }
+    },
+    "include": ["."]
+}
