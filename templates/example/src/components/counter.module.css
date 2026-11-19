@@ -1,0 +1,4 @@
+/* CSS Modules: class names are scoped to this file. */
+.counter {
+    font-variant-numeric: tabular-nums;
+}

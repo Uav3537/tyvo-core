@@ -1,0 +1,22 @@
+{
+    "compilerOptions": {
+        "target": "ES2022",
+        "lib": ["ES2023", "DOM", "DOM.Iterable"],
+        "module": "ESNext",
+        "moduleResolution": "Bundler",
+        "types": ["node"],
+        "strict": true,
+        "noUncheckedIndexedAccess": true,
+        "noImplicitOverride": true,
+        "isolatedModules": true,
+        "skipLibCheck": true,
+        "noEmit": true,
+        // The React runtimes import the package by name (kept external when bundled into user builds).
+        "paths": {
+            "@tyvo/core": ["./src/index.ts"],
+            "@tyvo/core/server": ["./src/server/index.ts"],
+            "@tyvo/core/router": ["./src/react/router.ts"]
+        }
+    },
+    "include": ["src", "tsup.config.ts"]
+}

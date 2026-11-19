@@ -1,0 +1,4 @@
+# .tyvo/ is build output (tyvo dev / build recreate it); .env*.local holds secrets.
+node_modules
+.tyvo
+.env*.local

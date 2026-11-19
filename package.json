@@ -1,0 +1,119 @@
+{
+  "name": "@tyvo/core",
+  "version": "1.1.0",
+  "description": "TypeScript-only, file-system routed web framework with typed routes, middlewares, rate limiting and React Server Components.",
+  "type": "module",
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "bin": {
+    "tyvo": "dist/cli.js"
+  },
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js"
+    },
+    "./server": {
+      "types": "./dist/server.d.ts",
+      "import": "./dist/server.js"
+    },
+    "./testing": {
+      "types": "./dist/testing.d.ts",
+      "import": "./dist/testing.js"
+    },
+    "./router": {
+      "types": "./dist/router.d.ts",
+      "import": "./dist/router.js"
+    },
+    "./link": {
+      "types": "./dist/link.d.ts",
+      "import": "./dist/link.js"
+    },
+    "./client": {
+      "types": "./dist/client.d.ts",
+      "import": "./dist/client.js"
+    },
+    "./assets": {
+      "types": "./assets.d.ts"
+    },
+    "./react-rsc": {
+      "import": "./dist/react-rsc.js"
+    },
+    "./react-ssr": {
+      "import": "./dist/react-ssr.js"
+    },
+    "./react-browser": {
+      "import": "./dist/react-browser.js"
+    },
+    "./package.json": "./package.json"
+  },
+  "publishConfig": {
+    "access": "public"
+  },
+  "files": [
+    "dist",
+    "assets.d.ts",
+    "templates",
+    "!templates/tsconfig.json",
+    "!templates/.types"
+  ],
+  "scripts": {
+    "build": "node -e \"require('node:fs').rmSync('dist', { recursive: true, force: true })\" && tsup",
+    "dev": "tsup --watch",
+    "typecheck": "tsc --noEmit && node scripts/typecheck-templates.mjs",
+    "prepublishOnly": "npm run build",
+    "release": "node scripts/release.mjs",
+    "local": "node scripts/local.mjs"
+  },
+  "keywords": [
+    "framework",
+    "http",
+    "server",
+    "router",
+    "typescript",
+    "file-system-routing",
+    "ratelimit",
+    "react",
+    "rsc",
+    "server-components"
+  ],
+  "author": "",
+  "license": "MIT",
+  "engines": {
+    "node": ">=18.17.0"
+  },
+  "dependencies": {
+    "esbuild": "^0.28.2",
+    "zod": "^4.6.7"
+  },
+  "peerDependencies": {
+    "react": "^19.3.1",
+    "react-dom": "^19.3.1",
+    "react-server-dom-turbopack": "^19.3.1",
+    "typescript": ">=5.0.0"
+  },
+  "peerDependenciesMeta": {
+    "typescript": {
+      "optional": true
+    },
+    "react": {
+      "optional": true
+    },
+    "react-dom": {
+      "optional": true
+    },
+    "react-server-dom-turbopack": {
+      "optional": true
+    }
+  },
+  "devDependencies": {
+    "@types/node": "^22.20.5",
+    "@types/react": "^19.3.0",
+    "@types/react-dom": "^19.3.0",
+    "react": "^19.3.1",
+    "react-dom": "^19.3.1",
+    "react-server-dom-turbopack": "^19.3.1",
+    "tsup": "^9.0.0",
+    "typescript": "^5.0.4"
+  }
+}

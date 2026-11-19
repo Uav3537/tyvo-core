@@ -1,0 +1,2 @@
+# Loaded by tyvo dev / build / start (real environment variables win). Never commit this file.
+COOKIE_SECRET={{cookieSecret}}

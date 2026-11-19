@@ -1,0 +1,6 @@
+{
+    // Tyvo's rules are checked by plain TypeScript in the generated .tyvo/types/check.ts (no plugin). With project
+    // diagnostics, its errors show in the Problems panel without opening that file; each names the file to fix.
+    // In a multi-root workspace (.code-workspace) put this in the workspace file's "settings" instead.
+    "typescript.tsserver.experimental.enableProjectDiagnostics": true
+}
